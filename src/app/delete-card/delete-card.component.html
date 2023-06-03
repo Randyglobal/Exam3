@@ -1,0 +1,15 @@
+<section class="form">
+    <div mat-dialog-title style="width: 400px; height: 200px;">
+        <h1>{{title}}</h1>
+        <table>
+            <tr *ngFor="let cards of cards">
+                <td>
+                    <div class="button">
+                        <button mat-raised-button color="warn" type="button" mat-dialog-close="false">Cancel</button>
+                        <button mat-raised-button color="primary" (click)="deleteCard(cards.productId)">Yes</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

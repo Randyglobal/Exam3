@@ -1,0 +1,34 @@
+<app-nav></app-nav>
+<div class="container-fluid" style="margin-top: 10px; border-bottom: 1px solid gray; height: 40px; width: 100%;">
+    <button routerLink="/view" mat-stroked-button color="primary" style="float:right; margin-right: 60px;">View
+      Card</button>
+  </div>
+<div class="container">
+    <div class="content">
+
+        <h2>Product Details</h2>
+        <!-- <button mat-button-raised routerLink="/view">View Cart</button> -->
+        
+        <div *ngIf="product">
+          <h3>Product Name:{{ product.Name }}</h3>
+          <h4>Product price::{{ product.price | currency : 'XAF'}}</h4>
+          <p>Product Quantity:</p>
+          <input type="number" name="quantity" [(ngModel)] = 'product.quantity' placeholder="Please put the quantity needed">
+         <br>
+          <p>Product Id:{{ product.productId }}</p>
+        
+          <button mat-stroked-button color="primary" type="button" (click)="addToCard(product)" routerLink="/view">Buy</button>
+        </div>
+    </div>
+    <!-- <div *ngIf="product">
+        <h3>Product Name:{{ product.Name }}</h3>
+        <h4>Product price:{{ product.price | currency }}</h4>
+        <p>Product Quantity:</p>
+        <input type="number" name="quantity" [(ngModel)] = 'product.quantity' placeholder="Please put the quantity needed">
+        <p>Product Id:{{ product.productId }}</p>
+      
+        <button type="button" (click)="addToCard(product)">Buy</button>
+      </div> -->
+
+</div>
+<app-footer></app-footer>

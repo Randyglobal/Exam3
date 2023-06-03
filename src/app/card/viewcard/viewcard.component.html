@@ -1,0 +1,64 @@
+<app-nav></app-nav>
+<div class="heading">
+    <h1 style="text-align: center;">Your Card</h1>
+</div>
+<!-- <table style="border: 1px solid black; margin: 10% auto;width: 90%;text-align: center;">
+    <tr style="border: 1px solid black;">
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>ProductId</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let card of cards">
+        <td>{{card.Name}}</td>
+            <td>
+                <button (click)="decrease()">-</button>
+                {{couter}}
+                <button (click)="increase()">+</button>
+            </td>
+        <td>{{card.price}}</td>
+        <td>{{card.productId}}</td>
+        
+        <td>
+            <button mat-fab color="primary" aria-label="Example icon button with a delete icon" 
+            (click)="deleteCard(card.productId)">
+                <mat-icon>delete</mat-icon>
+              </button>
+        </td>
+    </tr>
+</table> -->
+
+ <table style="border: 1px solid black; margin: 10% auto;width: 90%;text-align: center;">
+    <tr style="border: 1px solid black;">
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>ProductId</th>
+        <th>Action</th>
+        
+    </tr>
+    <tr class="cart-item" *ngFor="let items of item">
+      <td>{{ items.Name }}</td>
+      <td>{{ items.price | currency: 'XAF' }}</td>
+      <td> {{items.quantity}} </td>
+      <td> {{items.productId}} </td>
+      <td>
+        <button mat-fab color="primary" aria-label="Example icon button with a delete icon" 
+        (click)="delete(items)">
+            <mat-icon>delete</mat-icon>
+          </button>
+    </td>
+    </tr>
+    <tr>
+        <th>Total Products</th>
+        <th>Total Amount to be paid</th>
+    </tr>
+    <td>1</td>
+    
+    <td>
+        <button mat-raised-button color="blue" (click)="total()">Total</button>
+    </td>
+
+</table>
+<app-footer></app-footer>

@@ -1,0 +1,27 @@
+<section class="form">
+    <div mat-dialog-title style="width: 450px; height: 450px;">
+        <h1>{{title}}</h1>
+    <form>
+        <div class="from-control">
+            <label for="">Product Name</label><br>
+            <input type="text" name="name" [(ngModel)]="card.Name">
+        </div>
+        <div class="from-control">
+            <label for="">Quantity</label><br>
+            <input type="number" name="number" [(ngModel)]="card.quantity">
+        </div>
+        <div class="from-control">
+            <label for="">Price</label><br>
+            <input type="number" name="price" [(ngModel)]="price">
+        </div>
+        <div class="from-control">
+            <label for="">Product Id</label><br>
+            <input type="text" name="id" [(ngModel)]="productId">
+        </div>
+        <div class="button">
+            <button mat-raised-button color="warn" type="button" mat-dialog-close="false">Cancel</button>
+            <button mat-raised-button color="primary" (click)="addData()">Save</button>
+        </div>
+    </form>
+    </div>
+</section>

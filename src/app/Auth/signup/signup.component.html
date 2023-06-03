@@ -1,0 +1,22 @@
+<app-nav-bar></app-nav-bar>
+<form action="" method="post">
+    <h1>Please Confirm we Know You</h1>
+
+    <div class="form-control">
+        <label for="">User Name</label><br>
+        <input type="text" name="username" [(ngModel)]="User.username">
+    </div>
+    <div class="form-control">
+        <label for="">Email</label><br>
+        <input type="email" name="email" [(ngModel)]="User.email">
+    </div>
+    <div class="form-control">
+        <label for="">Password</label><br>
+        <input type="password" name="password" [(ngModel)]="User.password">
+    </div>
+    <div class="button">
+        <button class="btn" (click)="register()">Register</button>
+    </div>
+</form>
+<app-footer></app-footer>
+

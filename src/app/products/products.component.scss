@@ -1,0 +1,30 @@
+.section-container{
+    width: 100%;
+    height: 70vh;
+    // background: red;
+
+    button{
+        width: 50%;
+        height: 90px;
+        margin: 1rem auto;
+    }
+    .top-container{
+        width: inherit;
+        display: flex;
+        justify-content: space-between;
+        
+       
+    }
+    .bottom-container{
+        margin-top: 10px;
+        width: inherit;
+        display: flex;
+        justify-content: space-between;
+    }
+    .products{
+        width: 90% !important; 
+        height: 60px !important;
+        background: red !important;
+        margin: 10px auto !important;
+    }
+}
